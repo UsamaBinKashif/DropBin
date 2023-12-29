@@ -12,3 +12,5 @@ export const features = [
     img_url: "/assets/ManageBusinessDark.svg",
   },
 ];
+
+export const maxSize = 52428800;
