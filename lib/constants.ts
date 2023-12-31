@@ -14,3 +14,13 @@ export const features = [
 ];
 
 export const maxSize = 52428800;
+
+export const formattedDate = new Intl.DateTimeFormat("en-US", {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  hour12: true,
+}).format(Date.now());

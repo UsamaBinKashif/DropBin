@@ -1,10 +1,14 @@
 import DropZone from "@/components/common/dropzone";
+import BottomDrawer from "@/components/dashboard/BottomDrawer";
+import { Button } from "@/components/ui/button";
+import { toast } from "@/components/ui/use-toast";
 
 const Dashboard: React.FunctionComponent = () => {
   return (
-    <section className=" py-10 h-dvh">
+    <main className="h-dvh flex items-center justify-center relative">
       <DropZone />
-    </section>
+      {/* <BottomDrawer/> */}
+    </main>
   );
 };
 

@@ -7,6 +7,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Happy_Monkey } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 
 const happy_monkey = Happy_Monkey({
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
           >
             <Header />
             {children}
+            <Toaster />
             <Footer />
           </ThemeProvider>
         </body>
