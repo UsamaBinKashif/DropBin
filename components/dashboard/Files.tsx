@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-
+"use client"
 import { FileType } from "@/lib/types/typings";
+import Link from "next/link";
 import prettyBytes from "pretty-bytes";
 
 /* eslint-disable @next/next/no-img-element */
@@ -9,6 +10,7 @@ interface FileProps {
 }
 
 const Files: React.FunctionComponent<FileProps> = ({ skeletonFiles }) => {
+
   return (
     <section className="text-black dark:text-white ">
       <div className="container px-5 py-24 mx-auto">
@@ -37,12 +39,18 @@ const Files: React.FunctionComponent<FileProps> = ({ skeletonFiles }) => {
                     <p className="text-xs">
                       uploaded at: {skeletonFile.timestamp.toLocaleString()}
                     </p>
+
                   </div>
                 </div>
+                <div >  <Link href={skeletonFile.downloadURL} >
+                  <img src="/assets/download-icon.png" alt="download-icon" className="w-[30px]" />
+                </Link></div>
               </div>
             </div>
           ))}
+
         </div>
+
       </div>
     </section>
   );
