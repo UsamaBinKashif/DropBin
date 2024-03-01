@@ -13,7 +13,7 @@ const firebaseConfig = {
   projectId: "drop-bin24",
   storageBucket: "drop-bin24.appspot.com",
   messagingSenderId: "931446683904",
-  appId: "1:931446683904:web:072c408548dd7d38e31be5",
+  appId: "1:931446683904:web:072c408548dd7d38e31be5"
 };
 
 // Initialize Firebase

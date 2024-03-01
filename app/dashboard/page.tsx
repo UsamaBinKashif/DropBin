@@ -4,6 +4,7 @@ import { auth } from "@clerk/nextjs";
 import { collection, getDocs } from "firebase/firestore";
 import { FileType } from "@/lib/types/typings";
 import Files from "@/components/dashboard/Files";
+import TableWrapper from "@/components/dashboard/TableWrapper";
 const Dashboard: React.FunctionComponent = async () => {
   const { userId } = auth();
   const docsResult = await getDocs(collection(db, "users", userId!, "files"));
@@ -17,9 +18,13 @@ const Dashboard: React.FunctionComponent = async () => {
     size: doc.data().size,
   }));
   return (
-    <main className=" py-10 relative">
+    <main className=" py-10 relative ">
       <DropZone />
-      <Files skeletonFiles={skeletonFiles} />
+
+      <section className="container space-y-5 py-5">
+        <h2 className="font-bold">ALL FILES</h2>
+        <TableWrapper skeletonFiles={skeletonFiles} />
+      </section>
     </main>
   );
 };
